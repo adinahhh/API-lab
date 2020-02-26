@@ -53,11 +53,10 @@ def find_afterparties():
     res = requests.get(url, params=payload)
 
     data = res.json()
-    print(data)
 
     # data = {'Test': ['This is just some test data'],
     #         'page': {'totalElements': 1}}
-    events = data['resultCount']
+    events = data['_embedded']['events']
 
     # for event in range(events)
 
